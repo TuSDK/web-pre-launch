@@ -1,0 +1,157 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  background: #101216;
+}
+
+body {
+  min-width: 1308px;
+  padding-top: 1px; // hack
+  font-size: 16px;
+  font-family: 'Lantinghei SC', 'Microsoft Yahei', sans-serif;
+  color: #fff;
+  background: #232838 url(../img/grid.png);
+}
+
+input,
+button,
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 1308px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.dots {
+  position: relative;
+  margin-top: 130px;
+  @include sprite($dots);
+}
+
+.logo {
+  position: absolute;
+  top: -120px;
+  @include sprite($logo);
+  text-indent: -9999px;
+}
+
+.camera {
+  position: absolute;
+  top: -71px;
+  left: 466px;
+  @include sprite($camera);
+}
+
+.content {
+  margin: 0 auto;
+  width: 672px;
+}
+
+.announce {
+  margin: 1em 0 0;
+  color: #ffd200;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.note {
+  margin: 0 0 1em;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 5px;
+}
+
+.subscribe {
+  margin-bottom: 50px;
+  font-size: 0; // remove the gap
+}
+
+.email {
+  width: 220px;
+  padding: 9px 10px;
+  border: none;
+  color: #666;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.submit,
+.weibo {
+  &:hover,
+  &:focus {
+    background-color: #22b3dd;
+  }
+}
+
+.submit {
+  background-color: #0091ff;
+  @include sprite($send);
+  border: none;
+  vertical-align: middle;
+}
+
+.mission,
+.contact,
+.copy {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.mission {
+  margin: 12px 0;
+  color: #475273;
+  text-align: left;
+  strong {
+    font-size: 24px;
+    font-weight: normal;
+    color: #fff;
+  }
+}
+
+.footer {
+  margin-top: 50px;
+  padding: 30px 0 5px;
+  background: #101216;
+  color: #4b5054;
+}
+
+.content {
+  overflow: hidden;
+}
+
+.contact {
+  float: left;
+  margin: 0;
+  dd {
+    margin: 0;
+  }
+}
+
+.weibo {
+  float: right;
+  background-color: #0091ff;
+  @include sprite($weibo);
+  text-indent: -9999px;
+  border-radius: 24px;
+}
+
+.copy {
+  margin-top: 30px;
+  font-size: 12px;
+  text-align: center;
+}

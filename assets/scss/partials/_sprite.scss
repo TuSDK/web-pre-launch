@@ -1,0 +1,76 @@
+  $camera-x: 0px;
+  $camera-y: 494px;
+  $camera-offset-x: 0px;
+  $camera-offset-y: -494px;
+  $camera-width: 360px;
+  $camera-height: 484px;
+  $camera-total-width: 1288px;
+  $camera-total-height: 978px;
+  $camera-image: '../img/sprite.png';
+  $camera: 0px 494px 0px -494px 360px 484px 1288px 978px '../img/sprite.png';
+  $dots-x: 0px;
+  $dots-y: 0px;
+  $dots-offset-x: 0px;
+  $dots-offset-y: 0px;
+  $dots-width: 1288px;
+  $dots-height: 494px;
+  $dots-total-width: 1288px;
+  $dots-total-height: 978px;
+  $dots-image: '../img/sprite.png';
+  $dots: 0px 0px 0px 0px 1288px 494px 1288px 978px '../img/sprite.png';
+  $logo-x: 360px;
+  $logo-y: 494px;
+  $logo-offset-x: -360px;
+  $logo-offset-y: -494px;
+  $logo-width: 199px;
+  $logo-height: 71px;
+  $logo-total-width: 1288px;
+  $logo-total-height: 978px;
+  $logo-image: '../img/sprite.png';
+  $logo: 360px 494px -360px -494px 199px 71px 1288px 978px '../img/sprite.png';
+  $send-x: 607px;
+  $send-y: 494px;
+  $send-offset-x: -607px;
+  $send-offset-y: -494px;
+  $send-width: 53px;
+  $send-height: 40px;
+  $send-total-width: 1288px;
+  $send-total-height: 978px;
+  $send-image: '../img/sprite.png';
+  $send: 607px 494px -607px -494px 53px 40px 1288px 978px '../img/sprite.png';
+  $weibo-x: 559px;
+  $weibo-y: 494px;
+  $weibo-offset-x: -559px;
+  $weibo-offset-y: -494px;
+  $weibo-width: 48px;
+  $weibo-height: 48px;
+  $weibo-total-width: 1288px;
+  $weibo-total-height: 978px;
+  $weibo-image: '../img/sprite.png';
+  $weibo: 559px 494px -559px -494px 48px 48px 1288px 978px '../img/sprite.png';
+
+  @mixin sprite-width($sprite) {
+    width: nth($sprite, 5);
+  }
+
+  @mixin sprite-height($sprite) {
+    height: nth($sprite, 6);
+  }
+
+  @mixin sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+  }
+
+  @mixin sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(#{$sprite-image});
+  }
+
+  @mixin sprite($sprite) {
+    @include sprite-image($sprite);
+    @include sprite-position($sprite);
+    @include sprite-width($sprite);
+    @include sprite-height($sprite);
+  }
